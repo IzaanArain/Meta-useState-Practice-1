@@ -5,8 +5,12 @@ import MealsList from './components/MealsList'
 
 function App() {
   const [word, setWord] = useState("Eat")
+  
   const clickHandler=()=>{
     setWord("Drink")
+  }
+  const clickHandler2=()=>{
+    setWord("Eat")
   }
 
   const todaysMeals=[
@@ -21,8 +25,9 @@ function App() {
     <div>
       <Heading message={word+" at little lemon"}/>
       <button onClick={clickHandler}>Click</button>
+      <button onClick={clickHandler2}>Click</button>
       <MealsList meals={meals}/>
-      <MealCounter/>
+      <MealCounter meals={meals}/>
     </div>
   )
 }

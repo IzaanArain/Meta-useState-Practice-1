@@ -4,7 +4,7 @@ const MealsList = (props) => {
   
     return (
     <div>
-        {props.meals.map(meal=>{
+        {props.meals.map((meal)=>{
         return <MealItem
         key={meal.id} 
         name={meal.name} 
